@@ -8,11 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import Base.baseClass;
 
 public class signInPage extends baseClass{
-	@FindBy(name="/html/body/div[2]/section/div/div/div/div/div/div/div[1]/div/form/div/div[1]/div/input")
+
+	@FindBy(name="email")
 	WebElement Semail;
-	//@FindBy(name="email")
-	//WebElement Semail;
-	@FindBy(xpath="password")
+	@FindBy(name="password")
 	WebElement Spassword;
 	@FindBy(xpath="//button [@type=\"submit\"]")
 	WebElement Ssubmitbtn;

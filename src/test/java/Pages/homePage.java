@@ -8,16 +8,40 @@ import Base.baseClass;
 
 public class homePage extends baseClass{
 	
-	@FindBy(xpath="//img[@alt='logo']")
-	WebElement Hlogo;
-	@FindBy(name="email")
-	WebElement Cemail;
-	@FindBy(name="contact")
-	WebElement CphoneNo;
-	@FindBy(name="message")
-	WebElement Cmessage;
-	@FindBy(name="signup-btn")
-	WebElement Csignupbtn;
+	@FindBy(xpath="//img [@alt=\"logo\"]")
+	WebElement HPlogo;
+	@FindBy(xpath="//span [text()=\"Dashboard\"]")
+	WebElement HPDashboard;
+	@FindBy(xpath="//span [text()=\"Task\"]")
+	WebElement HPTask;
+	@FindBy(xpath="//span [text()=\"Apply Leave\"]")
+	WebElement HPapplyleave;
+
+	@FindBy(xpath="//span [text()=\"Timesheet\"]")
+	WebElement HPTimesheet;
+	@FindBy(xpath="//span [text()=\"Chat\"]")
+	WebElement HPChat;
+	@FindBy(xpath="//span [text()=\"Community\"]")
+	WebElement HPCommunity;
+	@FindBy(className="fab fa-microsoft")
+	WebElement HPFb;
+	@FindBy(className="fab fa-twitter")
+	WebElement HPtwitter;
+	@FindBy(className="fab fa-instagram")
+	WebElement HPInsta;
+	@FindBy(className="fab fa-youtube")
+	WebElement HPUtube;
+	@FindBy(className="fab fa-whatsapp")
+	WebElement HPWhatsapp;
+	@FindBy(xpath="//p [text()=\"Company Policies\"]")
+	WebElement HPcompanypolicy;
+	@FindBy(id="notificationCount")
+	WebElement HPnotificationCount;
+	@FindBy(id="messageCount")
+	WebElement HPmessageCount;
+	@FindBy(xpath="//img [@alt=\"user\"]")
+	WebElement HPuser;
+	
 
 	public homePage() {
 		PageFactory.initElements(driver, this);
@@ -31,6 +55,7 @@ public class homePage extends baseClass{
 		type(CphoneNo, cphoneNo);
 		type(Cmessage, cmessage);
 		clickOn(Csignupbtn);
+		
 		
 	}
 
